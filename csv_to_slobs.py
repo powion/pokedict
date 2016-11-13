@@ -7,7 +7,7 @@ PLAIN_TEXT = 'text/plain; charset=utf-8'
 LICENSE = 'Attribution-NonCommercial-ShareAlike 2.5 Generic'
 CREATED_BY = 'powion'
 
-langs = ['eng', 'fra', 'ger', 'ita', 'jap', 'kor', 'spa']
+langs = ['eng', 'fre', 'ger', 'ita', 'jap', 'kor', 'spa']
 
 def make_dict(l1, l2):
     filename = 'dict/pokemon_' + langs[l1] + '_' + langs[l2] + '.slob'
