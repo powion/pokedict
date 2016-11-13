@@ -61,7 +61,7 @@ text {
   <h2>Setup</h2>
   First, you need to install Aard2 on your device. <br><br>
   <a class="myButton" onclick="aard2()">Get Aard2</a>
-  
+
 
 <br><br>
   Then, you need to download the dictionary file to your device. Don't worry about ordering, the translations go both ways.
@@ -99,14 +99,6 @@ text {
   <br>
   <a class="myButton" onclick="getDict()">Get .slob file</a>
 
-<div id="contact" style="display:none;">
-  <br>
-  The language combination you have selected isn't available yet. Let me know that you're interested and I'll fix it quick!
-  <br>
-  <a class="myButton" onclick="gitHub()">Open an issue</a>
-  <!-- <a class="myButton" onclick="email()">email</a> -->
-</div>
-
 <br>
 <br>
 From the Aard2 app, go to the dictionary tab, press the "+" icon, and locate the .slob file. You're good to go! Catch em all!
@@ -132,7 +124,7 @@ The translations are all taken from <a href="http://bulbapedia.bulbagarden.net/"
 <br>
 <br>
 Pokémon © 1995-2016 Nintendo/Creatures Inc./GAME FREAK inc. TM, ® and Pokémon character names are trademarks of Nintendo.
-No copyright or trademark infringement is intended in using Pokémon content in this dictionary.
+No copyright or trademark infringement is intended in using Pokémon content in these dictionaries.
 </footer>
 
 </div>
@@ -142,38 +134,24 @@ No copyright or trademark infringement is intended in using Pokémon content in 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 <script type="text/javascript">
 
-	function gitHub() {
-	  l1 = document.getElementById("l1").innerHTML;
-	  l2 = document.getElementById("l2").innerHTML;
-	  issue = "https://github.com/powion/pokedict/issues/new?title=Add%20" + l1 + "%20to%20" + l2 + "&body=Please!";
-	  window.open(issue);
-	}
-
 	function gitHubGeneral() {
 	  issue = "https://github.com/powion/pokedict/issues/new";
 	  window.open(issue);
-	}
-
-	function email() {
-	  l1 = document.getElementById("l1").innerHTML;
-	  l2 = document.getElementById("l2").innerHTML;
-          email = "mailto:pokedict@swagyolo.biz?title=Add%20" + l1 + "%20to%20" + l2 + "&body=Please!";
-	  window.open(email);
 	}
 
 	function aard2() {
 	  window.open("https://play.google.com/store/apps/details?id=itkach.aard2");
 	}
 
-
         function getDict() {
-		l1 = document.getElementById("l1").innerHTML;
-		l2 = document.getElementById("l2").innerHTML;
-		if (l1 == "English" && l2 == "Japanese") {
-		  window.open("https://github.com/powion/pokedict/raw/master/dict/pokemon_jap_eng.slob");
-		} else {
-		  document.getElementById('contact').style.display = "block";
-		}
+		l1 = document.getElementById("l1").innerHTML.substring(0,3).toLowerCase();
+		l2 = document.getElementById("l2").innerHTML.substring(0,3).toLowerCase();
+                if (l1 < l2) {
+                    langs = l1 + "_" + l2;
+                } else {
+                    langs = l2 + "_" + l1;
+                }
+		window.open("https://github.com/powion/pokedict/raw/master/dict/pokemon_" + langs + ".slob");
 	}
 
 	function DropDown(el) {
