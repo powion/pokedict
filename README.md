@@ -10,8 +10,7 @@ Install Aard 2, then download the .slob file for your languages to your device. 
 
 ## Screenshots
 
-![Example search from English](./img/eng.png =250x) ![Example search from Japanese](./img/jap.png =250x)
-
+<img src="./img/eng.png" height="250"> <img src="./img/jap.png" height="250">
 
 ## Attribution and License
 
