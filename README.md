@@ -1,17 +1,12 @@
 # Pokémon Dictionary
 
-This is a dictionary containing not translations but mappings between the Japanese and English names of Pokémon, moves, items etc. It is intended to be used with the Android app [Aard 2](https://play.google.com/store/apps/details?id=itkach.aard2).
+This is a dictionary containing not translations but mappings between the names of Pokémon, moves, items etc in all the game's languages. It is intended to be used with the Android app [Aard 2](https://play.google.com/store/apps/details?id=itkach.aard2).
 
-If you find yourself missing something, or if you find any mistakes, please open an issue! I especially appreciate contributions in this format:
-
-```
-ピカチュ|Pickachu
-こうげき|Attack
-```
+If you find yourself missing something, or if you find any mistakes, please open an issue! You can also edit all_languages.csv and open a pull request.
 
 ## Installation
 
-Install Aard 2, then download `pokemon_jap_eng.slob` to your device. From the app, go to the dictionary tab, press the "+" icon, and locate the `pokemon_jap_eng.slob` file. Now you can search in either Japanese or English!
+Install Aard 2, then download the .slob file for your languages to your device. From the app, go to the dictionary tab, press the "+" icon, and locate the `pokemon_lang_lang.slob` file. Now you can search in either of the languages!
 
 ## Screenshots
 
